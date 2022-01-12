@@ -2,7 +2,6 @@ package com.example.pictures
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 
@@ -12,17 +11,16 @@ class MainActivity : AppCompatActivity() {
     private lateinit var forthText: TextView
     private lateinit var imageView: ImageView
 
-//    private fun initView (a:View, b:String){
-//       val c:Int = ("R.id.$b").toInt()
-//        a = findViewById(c)
-//    }
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+  private fun initView (){
     secondText = findViewById(R.id.textView2)
     thirdText = findViewById(R.id.textView3)
     forthText = findViewById(R.id.textView4)
     imageView = findViewById(R.id.imageView)
+ }
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+    initView()
     imageView.setOnClickListener{
         val phrases = listOf(
             "У тебя сегодня 6 пар",
