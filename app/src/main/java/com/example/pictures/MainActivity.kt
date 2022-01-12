@@ -17,25 +17,23 @@ class MainActivity : AppCompatActivity() {
     forthText = findViewById(R.id.textView4)
     imageView = findViewById(R.id.imageView)
  }
+   private val phrases = listOf(
+        "У тебя сегодня 6 пар",
+        "В доме полный беспорядок, хозяин",
+        "Покорми нас",
+        "Мы разбили твою любимую кружку!",
+        "Вставай, безработный",
+        "Нам нечего кушать!",
+        "В лотке плохо пахнет")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     initView()
     imageView.setOnClickListener{
-        val phrases = listOf(
-            "У тебя сегодня 6 пар",
-            "В доме полный беспорядок, хозяин",
-            "Покорми нас",
-            "Мы разбили твою любимую кружку!",
-            "Вставай, безработный",
-            "Нам нечего кушать!",
-            "В лотке плохо пахнет")
         val shuffledList = phrases.shuffled()
-//        initView(secondText,"textView")
-
-        secondText.text = shuffledList[0]
-        thirdText.text = shuffledList[1]
-        forthText.text = shuffledList[2]
+            secondText.text = shuffledList[0]
+            thirdText.text = shuffledList[1]
+            forthText.text = shuffledList[2]
     }
     }
 }
