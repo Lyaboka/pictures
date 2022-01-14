@@ -25,7 +25,8 @@
         android:rotationY="182"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/cat2" />
+        app:srcCompat="@drawable/cat2"
+        tools:srcCompat="@drawable/cat2" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -55,7 +56,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:background="@color/black"
-        android:text="Хозяин, ты проспал!"
+        android:text="Ответить котам!"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="20sp"

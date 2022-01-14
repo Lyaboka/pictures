@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">pictures</string>
+    <string name="about_text">
+    <p>У лукоморья дуб зелёный;</p>
+     <p>Златая цепь на дубе том: </p>
+     <p>И днём и ночью <b>кот учёный</b> </p>
+    <p> Всё ходит по цепи кругом; </p>
+    <p> Идёт <b>направо</b> - песнь заводит,</p>
+     <p><b>Налево</b> - сказку говорит.</p></string>
+    <string name="about_title">О программе</string>
 </resources>
