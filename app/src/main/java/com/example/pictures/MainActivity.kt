@@ -43,6 +43,7 @@ class MainActivity : AppCompatActivity() {
             secondText.text = shuffledList[0]
             thirdText.text = shuffledList[1]
             forthText.text = shuffledList[2]
+        // aaaaaaaaa
     }
     }
 }
