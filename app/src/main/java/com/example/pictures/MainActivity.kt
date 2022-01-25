@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
     imageView = findViewById(R.id.imageView)
     aboutView = findViewById(R.id.imageView2)
  }
-   private val phrases = listOf(
+    private val phrases = listOf(
         "У тебя сегодня 6 пар",
         "В доме полный беспорядок, хозяин",
         "Покорми нас",
@@ -30,20 +30,21 @@ class MainActivity : AppCompatActivity() {
         "Вставай, безработный",
         "Нам нечего кушать!",
         "В лотке плохо пахнет")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-    initView()
+        initView()
+
         firstText.setOnClickListener{
-            val intent = Intent(this@MainActivity, LetterActivity::class.java)
-            startActivity(intent)
+            startActivity(Intent(this@MainActivity, LetterActivity::class.java))
         }
-    imageView.setOnClickListener{
-        val shuffledList = phrases.shuffled()
+
+        imageView.setOnClickListener{
+            val shuffledList = phrases.shuffled()
             secondText.text = shuffledList[0]
             thirdText.text = shuffledList[1]
             forthText.text = shuffledList[2]
-        // aaaaaaaaa
-    }
+        }
     }
 }
