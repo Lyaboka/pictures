@@ -5,7 +5,7 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/thirdTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="50dp"
@@ -20,7 +20,7 @@
         app:layout_constraintStart_toEndOf="@+id/imageView3" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/forthTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
@@ -29,12 +29,12 @@
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/refreshIV"
         app:layout_constraintStart_toEndOf="@+id/imageView5"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/secondTV"
         android:layout_width="191dp"
         android:layout_height="21dp"
         android:layout_marginTop="29dp"
@@ -57,7 +57,7 @@
         app:srcCompat="@drawable/cat2" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/refreshIV"
         android:layout_width="162dp"
         android:layout_height="154dp"
         android:layout_marginEnd="-10dp"
@@ -78,7 +78,7 @@
         app:srcCompat="@drawable/cat_1" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/firstTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"

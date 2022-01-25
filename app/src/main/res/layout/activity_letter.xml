@@ -7,7 +7,7 @@
 
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/firstTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Письмо коту"
@@ -26,7 +26,7 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/firstTV"
         app:layout_constraintVertical_bias="0.22000003" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -53,7 +53,7 @@
         android:text="Сообщение"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/firstTV"
         app:layout_constraintVertical_bias="0.523" />
 
     <EditText
