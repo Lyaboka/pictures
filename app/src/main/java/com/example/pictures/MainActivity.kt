@@ -1,48 +1,58 @@
 package com.example.pictures
 
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ImageView
-import android.widget.TextView
+import android.widget.ArrayAdapter
+import kotlinx.android.synthetic.main.activity_main.*
+import java.util.*
+import kotlin.collections.ArrayList
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var firstText: TextView
-    private lateinit var secondText: TextView
-    private lateinit var thirdText: TextView
-    private lateinit var forthText: TextView
-    private lateinit var imageView: ImageView
-    private lateinit var aboutView: ImageView
+    private var actions = ArrayList<String>()
+    private var phrases = ArrayList<String>()
 
-  private fun initView (){
-    firstText = findViewById(R.id.textView)
-    secondText = findViewById(R.id.textView2)
-    thirdText = findViewById(R.id.textView3)
-    forthText = findViewById(R.id.textView4)
-    imageView = findViewById(R.id.imageView)
-    aboutView = findViewById(R.id.imageView2)
- }
-   private val phrases = listOf(
-        "У тебя сегодня 6 пар",
-        "В доме полный беспорядок, хозяин",
-        "Покорми нас",
-        "Мы разбили твою любимую кружку!",
-        "Вставай, безработный",
-        "Нам нечего кушать!",
-        "В лотке плохо пахнет")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-    initView()
-        firstText.setOnClickListener{
-            val intent = Intent(this@MainActivity, LetterActivity::class.java)
-            startActivity(intent)
+        fillArray()
+        actionsList.adapter = ArrayAdapter(this,android.R.layout.simple_list_item_1,actions)
+
+        actionsList.setOnItemClickListener { _, _, i, _ ->
+            when (i) {
+
+                0 -> startActivity(Intent(this@MainActivity, LetterActivity::class.java))
+
+                1 ->  {val shuffledList = phrases.shuffled()
+                    firstTV.text = shuffledList[0]
+                    secondTV.text = shuffledList[1]
+                    thirdTV.text = shuffledList[2]
+                    forthTV.text = shuffledList[3]
+                }
+
+                2 ->  {val random = Random()
+                    val color = Color.argb(255, random.nextInt(256), random.nextInt(256), random.nextInt(256))
+                    root_layout.setBackgroundColor(color)}
+            }
         }
-    imageView.setOnClickListener{
-        val shuffledList = phrases.shuffled()
-            secondText.text = shuffledList[0]
-            thirdText.text = shuffledList[1]
-            forthText.text = shuffledList[2]
+
     }
+
+    private fun fillArray()
+    {
+        phrases.add("У тебя сегодня 6 пар")
+        phrases.add("В доме полный беспорядок, хозяин")
+        phrases.add("Покорми нас")
+        phrases.add("Мы разбили твою любимую кружку!")
+        phrases.add("Вставай, безработный")
+        phrases.add("Нам нечего кушать!")
+        phrases.add("В лотке плохо пахнет")
+
+        actions.add("Отправить письмо")
+        actions.add("Перемешать фразы")
+        actions.add("Поменять цвет фона")
     }
+
+
 }
