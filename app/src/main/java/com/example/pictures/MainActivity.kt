@@ -13,29 +13,13 @@ class MainActivity : AppCompatActivity() {
     private var actions = ArrayList<String>()
     private var phrases = ArrayList<String>()
 
-    private fun fillArray()
-    {
-        phrases.add("У тебя сегодня 6 пар")
-        phrases.add("В доме полный беспорядок, хозяин")
-        phrases.add("Покорми нас")
-        phrases.add("Мы разбили твою любимую кружку!")
-        phrases.add("Вставай, безработный")
-        phrases.add("Нам нечего кушать!")
-        phrases.add("В лотке плохо пахнет")
-
-        actions.add("Отправить письмо")
-        actions.add("Перемешать фразы")
-        actions.add("Поменять цвет фона")
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         fillArray()
-        val adapter = ArrayAdapter(this,android.R.layout.simple_list_item_1,actions)
-        listView.adapter = adapter
+        actionsList.adapter = ArrayAdapter(this,android.R.layout.simple_list_item_1,actions)
 
-        listView.setOnItemClickListener { adapterView, view, i, l ->
+        actionsList.setOnItemClickListener { _, _, i, _ ->
             when (i) {
 
                 0 -> startActivity(Intent(this@MainActivity, LetterActivity::class.java))
@@ -54,4 +38,21 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
+    private fun fillArray()
+    {
+        phrases.add("У тебя сегодня 6 пар")
+        phrases.add("В доме полный беспорядок, хозяин")
+        phrases.add("Покорми нас")
+        phrases.add("Мы разбили твою любимую кружку!")
+        phrases.add("Вставай, безработный")
+        phrases.add("Нам нечего кушать!")
+        phrases.add("В лотке плохо пахнет")
+
+        actions.add("Отправить письмо")
+        actions.add("Перемешать фразы")
+        actions.add("Поменять цвет фона")
+    }
+
+
 }

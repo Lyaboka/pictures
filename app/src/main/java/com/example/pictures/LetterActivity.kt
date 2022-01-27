@@ -11,7 +11,7 @@ class LetterActivity: Activity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_letter)
 
-        button.setOnClickListener{
+        sendB.setOnClickListener{
             val intent = Intent(this@LetterActivity, AboutActivity::class.java).apply {
                 putExtra("username",user.text.toString())
                 putExtra("cat", cat.text.toString())

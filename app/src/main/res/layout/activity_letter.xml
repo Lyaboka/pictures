@@ -19,7 +19,7 @@
         app:layout_constraintVertical_bias="0.19" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/otpravTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Имя отправителя"
@@ -37,16 +37,16 @@
         app:layout_constraintGuide_percent="0.1" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/poluchTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Имя получателя"
-        app:layout_constraintBottom_toTopOf="@+id/textView7"
+        app:layout_constraintBottom_toTopOf="@+id/letterTV"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/otpravTV" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/letterTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
@@ -63,10 +63,10 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView5"
+        app:layout_constraintBottom_toBottomOf="@+id/poluchTV"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.2"
-        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintHorizontal_bias="0.448"
+        app:layout_constraintStart_toEndOf="@+id/otpravTV"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <EditText
@@ -76,8 +76,9 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView6"
+        app:layout_constraintBottom_toBottomOf="@+id/otpravTV"
         app:layout_constraintEnd_toEndOf="@+id/cat"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/cat"
         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -88,13 +89,13 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView7"
+        app:layout_constraintBottom_toBottomOf="@+id/letterTV"
         app:layout_constraintEnd_toEndOf="@+id/user"
         app:layout_constraintStart_toStartOf="@+id/user"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/sendB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Отправить"
